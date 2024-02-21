@@ -17,7 +17,7 @@ function buyTicket(seatId, availSeat, boughtSeat, elementAdd, totalFare, grandTo
         let parentDiv = document.getElementById(elementAdd);
         let newDiv = document.createElement('div');
         let ptag1 = document.createElement('p');
-        ptag1.textContent = 'C1';
+        ptag1.textContent = 'C2';
         newDiv.appendChild(ptag1);
         let ptag2 = document.createElement('p');
         ptag2.textContent = 'Economy';
