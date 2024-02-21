@@ -217,16 +217,32 @@
                     <div class="grid grid-cols-10 gap-16">
 
                         <div class="grid grid-cols-2 gap-4 col-span-5">
-                            <button onclick="buyTicket('A1', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="A1">A1</button>
-                            <button onclick="buyTicket('A2', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="A2">A2</button>
-                            <button onclick="buyTicket('B1', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="B1">B1</button>
-                            <button onclick="buyTicket('B2', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="B2">B2</button>
+                            <button
+                                onclick="buyTicket('A1', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="A1">A1</button>
+                            <button
+                                onclick="buyTicket('A2', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="A2">A2</button>
+                            <button
+                                onclick="buyTicket('B1', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="B1">B1</button>
+                            <button
+                                onclick="buyTicket('B2', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="B2">B2</button>
                         </div>
                         <div class="grid grid-cols-2 gap-4 col-span-5">
-                            <button onclick="buyTicket('A3', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="A3">A3</button>
-                            <button onclick="buyTicket('A4', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="A4">A4</button>
-                            <button onclick="buyTicket('B3', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="B3">B3</button>
-                            <button onclick="buyTicket('B4', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')" class="selected-seat py-4 bg-gray-100 rounded-xl" id="B4">B4</button>
+                            <button
+                                onclick="buyTicket('A3', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="A3">A3</button>
+                            <button
+                                onclick="buyTicket('A4', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="A4">A4</button>
+                            <button
+                                onclick="buyTicket('B3', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="B3">B3</button>
+                            <button
+                                onclick="buyTicket('B4', 'avail-seat', 'bought-seat', 'add-elements', 'total-fare', 'grand-total', 'next-button')"
+                                class="selected-seat py-4 bg-gray-100 rounded-xl" id="B4">B4</button>
                         </div>
 
                     </div>
@@ -238,7 +254,8 @@
                 <hr>
                 <div class="bg-gray-100 mt-5 p-3 rounded-xl">
                     <div class="flex justify-between">
-                        <p class="text-black font-semibold">Seat <sup id="bought-seat" class="bg-[#1DD100] px-1 rounded-md text-white">0</sup></p>
+                        <p class="text-black font-semibold">Seat <sup id="bought-seat"
+                                class="bg-[#1DD100] px-1 rounded-md text-white">0</sup></p>
                         <p class="text-black font-semibold">Class</p>
                         <p class="text-black font-semibold">Fare</p>
                     </div>
@@ -253,9 +270,10 @@
                         <p class="text-black font-semibold">BDT <span id="total-fare">0</span></p>
                     </div>
                     <div id="coupon-apply-section" class="flex justify-between my-5 bg-white pl-2 rounded-xl">
-                        <input id="input-coupon" type="text" placeholder="Have any copupon?"
+                        <input oninput="buttonEnable('input-coupon', 'apply-button')" id="input-coupon" type="text"
+                            placeholder="Have any copupon?"
                             class="focus:border-none focus:outline-none ml-4 bg-transparent" />
-                        <button id="apply-button"
+                        <button onclick="lastCal('apply-button','grand-total')" id="apply-button"
                             class="px-8 py-3 rounded-xl text-white bg-[#1DD100] font-semibold disabled:bg-gray-400"
                             disabled>Apply</button>
                     </div>
@@ -278,7 +296,8 @@
         <p> Thank you for Booking Our Bus Seats.
             We are working hard to find the best service and deals for you.</p>
         <p>Shortly you will find a confirmation in your email.</p>
-        <button onclick="buyAgain('content','modal-page')" class="bg-green-700 text-white p-3 rounded-xl">Continue</button>
+        <button onclick="buyAgain('content','modal-page')"
+            class="bg-green-700 text-white p-3 rounded-xl">Continue</button>
     </div>
 </body>
 
